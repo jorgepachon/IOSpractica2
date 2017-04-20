@@ -8,8 +8,10 @@
 
 import UIKit
 
-class VCprincipal: UIViewController {
+class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var tbMitable:UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,32 @@ class VCprincipal: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:TVCelda1 = tableView.dequeueReusableCell(withIdentifier: "Celda1") as! TVCelda1
+        
+        if (indexPath.row==0) {
+            <#code#>
+        }
+        else if(indexPath.row==1){
+            
+        }
+        else if(indexPath.row==2){
+            
+        }
+        else if(indexPath.row==3){
+            
+        }
+        else if(indexPath.row==4){
+            
+        }
+
+                return cell
     }
     
 

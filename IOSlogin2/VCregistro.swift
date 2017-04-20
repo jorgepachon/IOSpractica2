@@ -9,6 +9,8 @@
 import UIKit
 
 class VCregistro: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
