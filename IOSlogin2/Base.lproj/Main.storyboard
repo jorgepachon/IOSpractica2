@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="34" y="138"/>
         </scene>
-        <!--Cprincipal-->
+        <!--Tabla-->
         <scene sceneID="MDT-Lv-EOT">
             <objects>
                 <viewController id="jen-AN-p7Y" customClass="VCprincipal" customModule="IOSlogin2" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,6 +138,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Tabla" id="Hsi-jr-Adf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tbMitable" destination="gPq-l7-7V4" id="A6x-zU-nJG"/>
                     </connections>
@@ -196,7 +198,6 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaU-hM-ykj">
                                 <rect key="frame" x="153" y="121" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -226,6 +227,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="REGISTRAR"/>
+                                <connections>
+                                    <action selector="accionokr" destination="DWO-cZ-beX" eventType="touchUpInside" id="mn0-5W-fCz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hu-Sy-Zbx">
                                 <rect key="frame" x="281" y="617" width="78" height="30"/>
@@ -236,13 +240,31 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="X2u-yw-u8H"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-ku-WCH">
+                                <rect key="frame" x="93" y="318" width="188" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="errorlogin" destination="vfo-ku-WCH" id="Ctc-yG-GAq"/>
+                        <outlet property="txtfEmail" destination="AfE-ND-got" id="xHY-29-Lrp"/>
+                        <outlet property="txtfPasstwo" destination="NNu-mm-5Qc" id="9eA-Un-cCj"/>
+                        <outlet property="txtfRPass" destination="L7n-K5-Zzo" id="bgn-EQ-E2o"/>
+                        <outlet property="txtfRUser" destination="RaU-hM-ykj" id="g50-NX-0a2"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="RB7-Qy-zSU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faz-KB-7hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="888"/>
+            <point key="canvasLocation" x="892" y="887.40629685157433"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X2u-yw-u8H"/>
+    </inferredMetricsTieBreakers>
 </document>

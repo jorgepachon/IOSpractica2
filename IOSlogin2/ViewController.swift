@@ -26,6 +26,20 @@ class ViewController: UIViewController {
 
     @IBAction func accionbtnLoguear(){
         
-       
-}
+        if(txtfUser?.text != "" && txtfPass?.text != ""){
+            
+            FIRAuth.auth()?.signIn(withEmail: (txtfUser?.text)!, password: (txtfPass?.text)!) { (user, error) in
+                
+                if(error == nil){
+                    self.performSegue(withIdentifier: "tran1", sender: nil)
+                }
+                else{
+                    print("Error",error!)
+                }
+                
+            }
+            
+        }
+        
+    }
 }

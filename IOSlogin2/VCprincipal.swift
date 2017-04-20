@@ -31,24 +31,27 @@ class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let cell:TVCelda1 = tableView.dequeueReusableCell(withIdentifier: "Celda1") as! TVCelda1
         
         if (indexPath.row==0) {
-            <#code#>
+            cell.lblNombre?.text="jorge"
         }
         else if(indexPath.row==1){
-            
+            cell.lblNombre?.text="pepe"
         }
         else if(indexPath.row==2){
-            
+            cell.lblNombre?.text="antonio"
         }
         else if(indexPath.row==3){
-            
+            cell.lblNombre?.text="peter"
         }
         else if(indexPath.row==4){
-            
+            cell.lblNombre?.text="wen"
         }
 
                 return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 
     /*
     // MARK: - Navigation

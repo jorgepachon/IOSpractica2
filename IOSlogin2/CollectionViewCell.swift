@@ -1,28 +1,24 @@
 //
-//  TVCelda1.swift
-//  IOSlogin2
+//  CollectionViewCell.swift
+//  Actividad1
 //
-//  Created by Jorge Pachón Sánchez on 20/4/17.
-//  Copyright © 2017 Jorge Pachón Sánchez. All rights reserved.
+//  Created by Daniel de la Iglesia Gonzalez on 20/4/17.
+//  Copyright © 2017 Daniel de la Iglesia Gonzalez. All rights reserved.
 //
 
 import UIKit
 
-class TVCelda1: UITableViewCell {
+class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var imgvMain:UIImageView?
     @IBOutlet var lblNombre:UILabel?
-    @IBOutlet var lblImagen:UIImageView?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        
     }
-    
+
     func descargarImagen(ruta:String) {
         
         let islandRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
@@ -32,8 +28,9 @@ class TVCelda1: UITableViewCell {
             }
             else {
                 let image = UIImage(data: data!)
-                self.lblImagen?.image=image
+                self.imgvMain?.image=image
             }
         }
     }
+    
 }

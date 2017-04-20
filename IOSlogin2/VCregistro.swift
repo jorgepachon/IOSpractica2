@@ -10,7 +10,11 @@ import UIKit
 
 class VCregistro: UIViewController {
     
-    
+    @IBOutlet var txtfRUser:UITextField?
+    @IBOutlet var txtfRPass:UITextField?
+    @IBOutlet var txtfPasstwo:UITextField?
+    @IBOutlet var txtfEmail:UITextField?
+    @IBOutlet var errorlogin:UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +27,15 @@ class VCregistro: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func accionokr() {
+        FIRAuth.auth()?.createUser(withEmail:(txtfEmail?.text)!, password:(txtfRPass?.text)! ) { (user, error) in
+            if(error == nil){
+                self.performSegue(withIdentifier: "tran2", sender: self)
+            }
+            else{
+                print("Error",error!)
+            }
+        }
     }
-    */
-
+   
 }
