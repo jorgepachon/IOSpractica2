@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var btnLoguear:UIButton?
+    @IBOutlet var txtfUsuario:UITextField?
+    @IBOutlet var txtfPass:UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
