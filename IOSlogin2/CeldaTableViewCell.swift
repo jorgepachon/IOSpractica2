@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  CeldaTableViewCell.swift
 //  IOSlogin2
 //
 //  Created by Jorge Pachón Sánchez on 25/4/17.
@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import FirebaseStorage
 
-class CollectionViewCell: UICollectionViewCell {
+class CeldaTableViewCell: UITableViewCell {
     
-    @IBOutlet var imgvMain:UIImageView?
     @IBOutlet var lblNombre:UILabel?
+    @IBOutlet var lblImagen:UIImageView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Initialization code
     }
-    
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
     func descargarImagen(ruta:String) {
         
         let islandRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
@@ -27,10 +33,8 @@ class CollectionViewCell: UICollectionViewCell {
             }
             else {
                 let image = UIImage(data: data!)
-                self.imgvMain?.image=image
+                self.lblImagen?.image=image
             }
         }
     }
-    
 }
-

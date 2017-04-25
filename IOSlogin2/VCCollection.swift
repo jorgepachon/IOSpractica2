@@ -1,8 +1,8 @@
 //
-//  VCprincipal.swift
+//  VCCollection.swift
 //  IOSlogin2
 //
-//  Created by Jorge Pachón Sánchez on 20/4/17.
+//  Created by Jorge Pachón Sánchez on 25/4/17.
 //  Copyright © 2017 Jorge Pachón Sánchez. All rights reserved.
 //
 
@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet var tbMitable:UICollectionView?
+class VCCollection: UIViewController, UICollectionViewDelegate, UITableViewDataSource {
     
+     @IBOutlet var colPrincipal:UICollectionView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         DataHolder.sharedInstance.arCoche?.removeAll()
         
         
@@ -33,7 +34,9 @@ class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
             
             self.colPrincipal?.reloadData()
         })
+
             }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(DataHolder.sharedInstance.arCoche==nil){
             return 0
@@ -43,7 +46,7 @@ class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda2: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "micelda2", for: indexPath) as! CollectionViewCell
         
@@ -55,7 +58,6 @@ class VCprincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         return celda2
         
-    }
-    
-   
+    }    
+
 }
