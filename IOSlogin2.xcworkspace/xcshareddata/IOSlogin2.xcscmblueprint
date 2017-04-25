@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5A8168A487F1397998DB521086D13BAE1EB6D9F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5A8168A487F1397998DB521086D13BAE1EB6D9F9" : 9223372036854775807,
+    "9C52D8A9A39AF6DDCB75116AA381B891DDA88B65" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B650C92-F270-405F-9B4A-15ADC32D36C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5A8168A487F1397998DB521086D13BAE1EB6D9F9" : "IOSpractica2\/",
+    "9C52D8A9A39AF6DDCB75116AA381B891DDA88B65" : "IOSpracticaB\/ClasesIOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IOSlogin2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IOSlogin2.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jorgepachon\/IOSpractica2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A8168A487F1397998DB521086D13BAE1EB6D9F9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sacksrock\/ClasesIOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9C52D8A9A39AF6DDCB75116AA381B891DDA88B65"
+    }
+  ]
+}
